@@ -250,7 +250,7 @@ df.hist();
 ```
 
 
-![png](output_8_0.png)
+![png](images/output_8_0.png)
 
 
 #### Let's use Matplotlib directly for this one as the Pandas histogram figure doesn't look very clear.
