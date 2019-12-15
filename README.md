@@ -232,8 +232,7 @@ df[df['Genre'] == 'canadian pop']
 
 
 
-#### I guess canadian pop is not that big in the top 50.. Looks like only Shawn Mendes produces it. Let's see what else
-#### we're working with.
+#### I guess canadian pop is not that big in the top 50.. Looks like only Shawn Mendes produces it. Let's see what else we're working with.
 
 
 ```python
@@ -280,10 +279,7 @@ plt.tight_layout();
 ![png](images/output_10_0.png)
 
 
-#### Now we're talking.. This looks a lot more clear. It looks like most of the variables are heavily skewed either left or right.
-#### Only a few of the columns in here seem to have a normal distribution. That makes sense as they weren't randomly selected
-#### from the poulation; thus we wouldn't necessarily expect them to be normally distributed nor would we expect them to 
-#### be representative of all songs. Let's look a little deeper into Valence.
+#### Now we're talking.. This looks a lot more clear. It looks like most of the variables are heavily skewed either left or right. Only a few of the columns in here seem to have a normal distribution. That makes sense as they weren't randomly selected from the poulation; thus we wouldn't necessarily expect them to be normally distributed nor would we expect them to be representative of all songs. Let's look a little deeper into Valence which represents the degree to which the song portrays a positive mood.
 
 
 ```python
@@ -297,9 +293,8 @@ print(f"The range of values valence took on in this dataset was from {df['Valenc
     The range of values valence took on in this dataset was from 10 to 95
 
 
-#### It would appear that valence might be rated on a scale from 0 to 100, but we cannot be sure.
-#### The only thing we can tell here is that songs in this dataset took on valence values from 10 to 95.
-#### I wonder what kind of songs were high in valence and what kind of songs are low in valence..
+#### It would appear that valence might be rated on a scale from 0 to 100, but we cannot be sure. The only thing we can tell here is that songs in this dataset took on valence values from 10 to 95. I wonder what kind of songs were high in valence and what kind of songs are low in valence..
+
 #### Top 10 valenced songs:
 
 
@@ -519,8 +514,10 @@ df.sort_values('Valence.', ascending=False).head(10).reset_index()
 </table>
 </div>
 
+#### This data seems to make sense. Personally, I don't really recognize these songs but they seem to be poppy and boyband-ish. Those types of songs usually try to be pretty uplifting and happy.
 
-#### Lowest 10 valenced songs:
+
+#### Let's check out the lowest 10 valenced songs:
 
 ```python
 df.sort_values('Valence.').head(10).reset_index()
@@ -738,6 +735,7 @@ df.sort_values('Valence.').head(10).reset_index()
 </table>
 </div>
 
+#### Once again, I'm not recognizing too many of these songs but several of them do seem to be a little less happy such as 'Goodbyes'.
 
 
 
