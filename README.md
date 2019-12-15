@@ -35,7 +35,7 @@ df.head()
     .dataframe thead th {
         text-align: right;
     } -->
-</style>
+<!-- </style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -152,7 +152,7 @@ df[df['Genre'] == 'canadian pop']
 
 
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -165,7 +165,7 @@ df[df['Genre'] == 'canadian pop']
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -301,7 +301,7 @@ df.sort_values('Valence.', ascending=False).head(10).reset_index()
 
 
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -314,7 +314,7 @@ df.sort_values('Valence.', ascending=False).head(10).reset_index()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -520,7 +520,7 @@ df.sort_values('Valence.').head(10).reset_index()
 
 
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -533,7 +533,7 @@ df.sort_values('Valence.').head(10).reset_index()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
