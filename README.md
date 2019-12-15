@@ -300,6 +300,7 @@ print(f"The range of values valence took on in this dataset was from {df['Valenc
 #### It would appear that valence might be rated on a scale from 0 to 100, but we cannot be sure.
 #### The only thing we can tell here is that songs in this dataset took on valence values from 10 to 95.
 #### I wonder what kind of songs were high in valence and what kind of songs are low in valence..
+#### Top 10 valenced songs:
 
 
 ```python
@@ -519,7 +520,7 @@ df.sort_values('Valence.', ascending=False).head(10).reset_index()
 </div>
 
 
-
+#### Lowest 10 valenced songs:
 
 ```python
 df.sort_values('Valence.').head(10).reset_index()
