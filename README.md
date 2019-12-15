@@ -1,4 +1,12 @@
 # Spotify-EDA-in-Python
+## Data exploration of the top 50 listened to songs on Spotify.
+
+# Summary of data:
+* Data includes 13 features of the top 50 listened to songs on Spotify.
+* Data was pooled worldwide; not just in the US.
+* Each row represents a song on the top 50 list.
+* Each column represents a feature of that song (e.g. beats per minute).
+* No missing data.
 
 ```python
 import pandas as pd
