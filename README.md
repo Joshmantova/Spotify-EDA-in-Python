@@ -1,5 +1,4 @@
 # Spotify-EDA-in-Python
-## Data exploration of the top 50 listened to songs on Spotify.
 
 # Summary of data:
 * Data includes 13 features of the top 50 listened to songs on Spotify.
