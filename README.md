@@ -22,7 +22,7 @@ df.head()
 
 
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -34,7 +34,7 @@ df.head()
 
     .dataframe thead th {
         text-align: right;
-    }
+    } -->
 </style>
 <table border="1" class="dataframe">
   <thead>
