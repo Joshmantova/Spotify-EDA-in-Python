@@ -761,13 +761,11 @@ ax.set_title("Top 10 songs sorted by valence");
 
 ![png](images/output_16_0.png)
 
-
+#### Now that we have explored the valence feature a bit, let's shift to looking at how many times each artist had a song that was in the top 50. Instead of including all artists in the dataset, let's only include the 10 most popular artists. Who has the highest number of songs in this top 50 list?:
 
 ```python
 gb = df.groupby('Artist.Name')[['Track.Name']].count().sort_values(by='Track.Name', ascending=False).head(10)
 ```
-
-#### Now that we have explored the valence feature a bit, let's shift to looking at how many times each artist had a song that was in the top 50. Instead of including all artists in the dataset, let's only include the 10 most popular artists. Who has the highest number of songs in this top 50 list?:
 
 ```python
 y = gb.values.flatten()[::-1]
