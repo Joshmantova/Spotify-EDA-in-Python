@@ -269,7 +269,7 @@ plt.tight_layout();
 ```
 
 
-![png](output_10_0.png)
+![png](images/output_10_0.png)
 
 
 #### Now we're talking.. This looks a lot more clear. It looks like most of the variables are heavily skewed either left or right.
@@ -750,7 +750,7 @@ ax.set_title("Top 10 songs sorted by valence");
 ```
 
 
-![png](output_16_0.png)
+![png](images/output_16_0.png)
 
 
 
@@ -776,7 +776,7 @@ ax.set_title("Number of songs an artist has in the top 50 list");
 ```
 
 
-![png](output_19_0.png)
+![png](images/output_19_0.png)
 
 
 
