@@ -8,20 +8,22 @@
 * Each column represents a feature of that song (e.g. beats per minute).
 * No missing data.
 
+#### First, let's import some libraries that will be useful for working with and visualizing the data. I also prefer Matplotlib's Fivethirtyeight style for graphs:
+
 ```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.stats as stats
 
 plt.style.use("fivethirtyeight")
 ```
 
+#### Loading in the data file as a Pandas dataframe:
 
 ```python
 df = pd.read_csv("Downloads/top50.csv", encoding='latin1', index_col=0)
 ```
-
+#### Let's take a quick look at the first entries in this data file:
 
 ```python
 df.head()
@@ -232,7 +234,7 @@ df[df['Genre'] == 'canadian pop']
 
 
 
-#### I guess canadian pop is not that big in the top 50.. Looks like only Shawn Mendes produces it. Let's see what else we're working with.
+#### I guess canadian pop is not that big in the top 50.. Looks like only Shawn Mendes produces it. Let's see what other features were included in this dataset.
 
 
 ```python
@@ -293,7 +295,7 @@ print(f"The range of values valence took on in this dataset was from {df['Valenc
     The range of values valence took on in this dataset was from 10 to 95
 
 
-#### It would appear that valence might be rated on a scale from 0 to 100, but we cannot be sure. The only thing we can tell here is that songs in this dataset took on valence values from 10 to 95. I wonder what kind of songs were high in valence and what kind of songs are low in valence..
+#### It would appear that valence might be rated on a scale from 0 to 100 but we cannot be sure. The only thing we can tell here is that songs in this dataset took on valence values from 10 to 95. I wonder what kind of songs were high in valence and what kind of songs are low in valence..
 
 #### Top 10 valenced songs:
 
@@ -737,7 +739,7 @@ df.sort_values('Valence.').head(10).reset_index()
 
 #### Once again, I'm not recognizing too many of these songs but several of them do seem to be a little less happy such as 'Goodbyes'.
 
-
+#### Let's shift to visualizing this data. What would a graph of the top 10 valenced songs look like? We will sort the dataset by valence with the top valenced songs at the top. Then we will create a variable that will represent not only the song name but also the artist behind the song to make it a little more meaningful. After that, we will reverse both the variable that represents song names and the valence values so that we can get the top valenced songs first on the graph. Finally, we will plot this figure:
 
 ```python
 df_sortval = df.sort_values(by='Valence.', ascending=False).copy()
@@ -765,6 +767,7 @@ ax.set_title("Top 10 songs sorted by valence");
 gb = df.groupby('Artist.Name')[['Track.Name']].count().sort_values(by='Track.Name', ascending=False).head(10)
 ```
 
+#### Now that we have explored the valence feature a bit, let's shift to looking at how many times each artist had a song that was in the top 50. Instead of including all artists in the dataset, let's only include the 10 most popular artists. Who has the highest number of songs in this top 50 list?:
 
 ```python
 y = gb.values.flatten()[::-1]
@@ -786,7 +789,4 @@ ax.set_title("Number of songs an artist has in the top 50 list");
 ![png](images/output_19_0.png)
 
 
-
-```python
-
-```
+#### Interesting! Ed Sheeran has 4 songs in this top 50 list whereas everyone else has at most 2.
